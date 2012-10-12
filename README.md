@@ -10,5 +10,5 @@ I get a torrent of email from IT recruiters.  Some of them contain well-targeted
 
 Result: instant productivity boost.
 
-See also https://mocko.org.uk/b/2011/09/08/silencing-the-flood-of-recruiter-emails-with-a-domain-list/
+See also the [original blog post](https://mocko.org.uk/b/2011/09/08/silencing-the-flood-of-recruiter-emails-with-a-domain-list/).
 
