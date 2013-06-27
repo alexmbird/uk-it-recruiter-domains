@@ -17,6 +17,9 @@ else
 fi
 
 
+echo "Will add '$dom'"
+
+
 # Check not already present
 if grep --quiet "^$dom\$" $2; then
   echo "Already present; quitting"
