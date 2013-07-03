@@ -16,6 +16,12 @@ else
   dom=$1
 fi
 
+if [ ! -f "$2" ];
+then
+  echo "Domains file '$2' doesn't exist; cowardly refusing to create it"
+  exit 1
+fi
+
 
 echo "Will add '$dom'"
 
