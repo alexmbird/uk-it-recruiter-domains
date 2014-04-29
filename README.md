@@ -16,8 +16,8 @@ See also the [original blog post](https://mocko.org.uk/b/2011/09/08/silencing-th
 Google Mail
 -----------
 
-GMail support is achieved via filters, you can import gmailFilters.xml from the
-filters page in the interface.
+GMail support is achieved via filters, you can import [gmailFilters.xml](https://github.com/alexmbird/uk-it-recruiter-domains/blob/master/gmailFilters.xml)
+from the filters page in the interface.
 
 A few things worth noting:
 
@@ -25,4 +25,5 @@ A few things worth noting:
 - By default we add a "Recruitment" label and archive any matches, you'll
   probably want to edit the filters created.
 - If you reimport the filters, the originals remain.
-- Update the XML based on domains.txt by running scripts/domains2gmail.rb.
+- Update the XML based on domains.txt by running
+  [scripts/domains2gmail.rb](https://github.com/alexmbird/uk-it-recruiter-domains/blob/master/scripts/domains2gmail.py).
