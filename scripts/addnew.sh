@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# Helper script to ease adding new domains
+#
+
 set -e
 
 if [[ "$1" == "" || "$2" == "" ]]; then
@@ -41,6 +45,9 @@ mv $2 temp_domains.txt
 sort temp_domains.txt > domains.txt
 rm -f temp_domains.txt
 
+
+# Recompile gmail filter
+./scripts/domains2gmail.rb
 
 
 # Add to GitHub
