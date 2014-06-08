@@ -18,6 +18,7 @@ def chunks(l, n):
         yield l[i:i+n]
 
 
+print 'require ["fileinto"];'
 print 'if address :matches "from" ['
 
 for d in doms[:-1]:
