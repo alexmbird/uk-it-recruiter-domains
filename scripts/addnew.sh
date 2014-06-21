@@ -7,7 +7,7 @@
 set -e
 
 if [[ "$1" == "" ]]; then
-  echo "Usage: $0 <address_or_domain> [<domains_txt>]"
+  echo "Usage: $0 <email_or_domain> [<domains_txt>]"
   exit 0
 fi
 
