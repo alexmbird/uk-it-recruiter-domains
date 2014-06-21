@@ -53,6 +53,3 @@ rm -f temp_domains.txt
 # Add to GitHub
 git add domains.txt
 git commit -m "Add $dom"
-git push
-
-
