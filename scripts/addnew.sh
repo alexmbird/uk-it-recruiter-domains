@@ -50,14 +50,8 @@ mv $DOMAINFILE temp_domains.txt
 LC_COLLATE=c sort temp_domains.txt > domains.txt
 rm -f temp_domains.txt
 
-
-# Recompile gmail filter
-./scripts/domains2gmail.rb
-
-
 # Add to GitHub
 git add domains.txt
-git add gmailFilters.xml
 git commit -m "Add $dom"
 git push
 
