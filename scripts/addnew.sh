@@ -13,10 +13,9 @@ fi
 
 
 if [[ "$1" == *"@"* ]]; then
-  echo "It's an address"
   dom=`echo $1 | cut -f2 -d'@'`
+  echo "domain extracted from email address: $dom"
 else
-  echo "it's a domain"
   dom=$1
 fi
 
