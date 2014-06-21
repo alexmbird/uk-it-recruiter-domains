@@ -42,7 +42,7 @@ echo "$dom" >> $2
 
 # Sort
 mv $2 temp_domains.txt
-sort temp_domains.txt > domains.txt
+LC_COLLATE=c sort temp_domains.txt > domains.txt
 rm -f temp_domains.txt
 
 
