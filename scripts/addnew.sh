@@ -20,7 +20,8 @@ function print_usage {
     echo "Options:"
     echo 
     echo "  -d <f>   - alternate domains.txt file <f>"
-    echo "  -p       - automatically commit & push to GitHub"
+    echo "  -c       - automatically commit"
+    echo "  -p       - automatically push to GitHub; implies -c"
     echo "  -h       - this help text"
     echo
     
@@ -30,7 +31,7 @@ function print_usage {
 
 
 # Execute getopt
-ARGS=$(getopt hpd: "$@")
+ARGS=$(getopt hcpd: "$@")
 
 
 
@@ -49,6 +50,7 @@ eval set -- "$ARGS"
 
 # Set defaults
 GIT_PUSH=0
+GIT_COMMIT=0
 DOMAINFILE="domains.txt"
 
 
@@ -60,8 +62,12 @@ while true; do
       print_usage
       exit 0
       shift;;
+    -c)
+      GIT_COMMIT=1
+      shift;;
     -p)
       GIT_PUSH=1
+      GIT_COMMIT=1
       shift;;
     -d)
       DOMAINFILE="$2"
@@ -118,13 +124,20 @@ LC_COLLATE=c sort temp_domains.txt > $DOMAINFILE
 rm -f temp_domains.txt
 
 
-# Add to GitHub
-if [ $GIT_PUSH == 1 ];
+# Automatically commit
+if [ $GIT_COMMIT == 1 ];
 then
     git add "$DOMAINFILE"
     git commit -m "Added $dom"
+else
+    echo "Don't forget to commit"
+fi
+
+# Add to GitHub
+if [ $GIT_PUSH == 1 ];
+then
     git push
 else
-    echo "Don't forget to commit & push to GitHub"
+    echo "Don't forget to push to GitHub"
 fi
 
