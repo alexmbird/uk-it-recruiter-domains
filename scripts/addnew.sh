@@ -123,6 +123,9 @@ mv $DOMAINFILE temp_domains.txt
 LC_COLLATE=c sort temp_domains.txt > $DOMAINFILE
 rm -f temp_domains.txt
 
+# Count
+NUM_DOMAINS=`wc -l $DOMAINFILE | awk '{print $1;}'`
+echo "$NUM_DOMAINS now in the list"
 
 # Automatically commit
 if [ $GIT_COMMIT == 1 ];
