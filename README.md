@@ -49,3 +49,9 @@ domain extracted from email address: noisyrecruiters.com
 Adding 'noisyrecruiters.com' to domains.txt
 ...commits & pushes to GitHub
 ```
+
+
+## Alternatives
+
+[Recruiter Ham](http://recruiterham.joshuafox.com) is a fledgling project to build a reputation system for recruiters with an easy-to-use gmail interface.
+
