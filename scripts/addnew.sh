@@ -105,6 +105,8 @@ else
   dom=$1
 fi
 
+# Make domain lowercase
+dom=`echo "${dom}" | tr '[:upper:]' '[:lower:]'`
 
 
 # Check not already present
