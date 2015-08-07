@@ -11,7 +11,7 @@ domains.each_slice(70) do |a|
     <entry>
       <category term='filter'></category>
       <title>Mail Filter</title>
-      <apps:property name='hasTheWord' value='#{a.join(' OR ')}'/>
+      <apps:property name='from' value='#{a.join(' OR ')}'/>
       <apps:property name='label' value='Recruitment'/>
       <apps:property name='shouldArchive' value='true'/>
     </entry>
