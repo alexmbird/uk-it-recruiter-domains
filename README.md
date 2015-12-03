@@ -14,6 +14,12 @@ Maintaining a list of domains they send email from makes it easy to filter messa
 
 GMail support is achieved via filters, you can import [gmailFilters.xml](https://github.com/alexmbird/uk-it-recruiter-domains/blob/master/gmailFilters.xml) from the filters page in the interface.
 
+```
+# ./scripts/domains2gmail.rb
+# ls -l gmailFilters.xml
+-rw-r--r--  1 mock mock  13501  3 Dec 11:30 gmailFilters.xml
+```
+
 A few things worth noting:
 
 - Filters have a max query length, so we break them up into chunks of 70.
