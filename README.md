@@ -4,7 +4,7 @@ List of the domains of UK IT recruiters &amp; some scripts for processing it.
 
 ## Why?
 
-I get a torrent of email from IT recruiters. Some of them contain well-targeted, intelligent specs for jobs I might actually want.  Most don't and I am not excited at the prospect of a £15k starter role as an e-janitor in Barnsley.
+I get a torrent of email from IT recruiters. Some of them contain well-targeted, intelligble specs for jobs I might actually want.  Most don't, and I don't want them clogging up my inbox.
 
 Maintaining a list of domains they send email from makes it easy to filter messages into their own folder.  It's easy to process the list into formats suitable for different mail systems: gmail and sieve rulesets are currently supported and contributions for others are welcome.
 
@@ -28,7 +28,7 @@ A few things worth noting:
 - Update the XML based on domains.txt by running [scripts/domains2gmail.rb](https://github.com/alexmbird/uk-it-recruiter-domains/blob/master/scripts/domains2gmail.py).
 
 
-## Adding Domains
+## Contributing
 
 There are two ways to do this.
 
@@ -55,6 +55,14 @@ domain extracted from email address: noisyrecruiters.com
 Adding 'noisyrecruiters.com' to domains.txt
 ...commits & pushes to GitHub
 ```
+
+## Conventions
+
+*   Domains all in lowercase (`addnew.sh` lowercases them automatically)
+*   One domain per line
+*   No leading/trailing whitespace
+*   __Check every domain you add is really a recruitment agency.__  Consultancies, email providers (e.g. gmail) and internal recruiters at big companies don't count.
+
 
 
 ## Alternatives
